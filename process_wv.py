@@ -227,7 +227,7 @@ if __name__ == "__main__":
                             newimg = (newimg).astype(np.uint8)
 
                             if idx%1000 == 0 and SAVE_IMAGES:
-                                Image.fromarray(newimg).save(args.image_folder + 'img_%s_%s_%s.png'%(name,extra,it[0]))
+                                Image.fromarray(newimg).save('process/img_%s_%s_%s.png'%(name,extra,it[0]))
 
                             if len(nb) > 0:
                                 tf_example = tfr.to_tf_example(newimg,nb,classes_final[idx])
@@ -241,7 +241,7 @@ if __name__ == "__main__":
                                     train_chips+=1
                             else:
                                 if SAVE_IMAGES:
-                                    aug.draw_bboxes(newimg,nb).save(args.image_folder + 'img_nobox_%s_%s_%s.png'%(name,extra,it[0]))
+                                    aug.draw_bboxes(newimg,nb).save('process/img_nobox_%s_%s_%s.png'%(name,extra,it[0]))
         if res_ind == 0:
             max_chips_per_res = int(ind_chips * 1.5)
             logging.info("Max chips per resolution: %s " % max_chips_per_res)
