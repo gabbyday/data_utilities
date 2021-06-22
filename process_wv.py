@@ -172,7 +172,7 @@ if __name__ == "__main__":
         for fname in tqdm(fnames):
             #Needs to be "X.tif", ie ("5.tif")
             #Be careful!! Depending on OS you may need to change from '/' to '\\'.  Use '/' for UNIX and '\\' for windows
-            name = fname.split("/")[-1]
+            name = fname.split("\\")[-1]
             arr = wv.get_image(fname)
 
             im,box,classes_final = wv.chip_image(arr,coords[chips==name],classes[chips==name],it)
