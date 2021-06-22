@@ -148,7 +148,7 @@ if __name__ == "__main__":
     res = [(300,300)]
 
     AUGMENT = args.augment
-    SAVE_IMAGES = False
+    SAVE_IMAGES = True
     images = {}
     boxes = {}
     train_chips = 0
