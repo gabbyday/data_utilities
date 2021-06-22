@@ -156,8 +156,8 @@ if __name__ == "__main__":
 
     #Parameters
     max_chips_per_res = 100000
-    train_writer = tf.python_io.TFRecordWriter("xview_train_%s.record" % args.suffix)
-    test_writer = tf.python_io.TFRecordWriter("xview_test_%s.record" % args.suffix)
+    train_writer = tf.io.TFRecordWriter("xview_train_%s.record" % args.suffix)
+    test_writer = tf.io.TFRecordWriter("xview_test_%s.record" % args.suffix)
 
     coords,chips,classes = wv.get_labels(args.json_filepath)
 
