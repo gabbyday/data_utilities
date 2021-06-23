@@ -151,8 +151,8 @@ if __name__ == "__main__":
     SAVE_IMAGES = True
     images = {}
     boxes = {}
-    train_chips = 141
-    test_chips = 16
+    train_chips = 0
+    test_chips = 0
     #Parameters
     max_chips_per_res = 100000
     train_writer = tf.io.TFRecordWriter("xview_train_%s.record" % args.suffix)
